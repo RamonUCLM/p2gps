@@ -47,8 +47,8 @@ jobs:
       password: ${{ secrets.ACR_PASSWORD }}
    - name: Etiquetar imágenes para ACR
      run: |
-      docker tag p2gps/web ${{ secrets.ACR_LOGIN_SERVER }}/p2gps25:web
-      docker tag p2gps/order ${{ secrets.ACR_LOGIN_SERVER }}/p2gps25:order
+      docker tag p2gps/web ${{ secrets.ACR_LOGIN_SERVER }}/p2gps:web
+      docker tag p2gps/order ${{ secrets.ACR_LOGIN_SERVER }}/p2gps:order
    - name: Push a ACR
      run: |
       docker push ${{ secrets.ACR_LOGIN_SERVER }}/p2gps:order
